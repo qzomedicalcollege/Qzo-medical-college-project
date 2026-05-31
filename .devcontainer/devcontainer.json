@@ -1,0 +1,30 @@
+{
+  "name": "Qzo Medical (Node 20)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20",
+  "forwardPorts": [3000],
+  "postCreateCommand": "npm install",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker",
+        "streetsidesoftware.code-spell-checker",
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "http.proxySupport": "off",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Next.js dev",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
